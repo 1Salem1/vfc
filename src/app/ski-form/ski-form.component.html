@@ -1,0 +1,244 @@
+
+
+<div class="wrapper position-relative">
+    
+    <div class="container-fluid px-5">
+    <!--   <div class="step_bar_content ps-5 pt-5">
+    <img class="logo" src='https://ogso-mountain-essentials.com/wp-content/uploads/2021/09/ogso-logo.png'/>  
+          <h5 class="text-white text-uppercase d-inline-block">Quiz Questions and Answers</h5>
+       </div> -->
+     
+       <div class="progress_bar steps_bar mt-3 ps-5 d-inline-block">
+          <div class="step rounded-pill d-inline-block text-center position-relative active current">1</div>
+          <div class="step rounded-pill d-inline-block text-center position-relative">2</div>
+          <div class="step rounded-pill d-inline-block text-center position-relative">3</div>
+          <div class="step rounded-pill d-inline-block text-center position-relative">4</div>
+       </div>
+       <form class="multisteps_form position-relative" id="wizard" method="POST" action="../thankyou/index-1.html">
+          <!------------------------- Step-1 ----------------------------->
+          <div class="multisteps_form_panel active" data-animation="slideVert">
+             <div class="form_content">
+                <div class="row">
+                   <div class="col-lg-4 self-center">
+                      <div class="form_title ps-5  ">
+               <span  class="title text-black font-sans text-3xl  mb-5 "><span class="font-bold">HEIGHT&nbsp;</span>AND&nbsp; <span class="font-bold">WEIGHT&nbsp;</span>WILL&nbsp;BE <span class="font-bold">OUR&nbsp;STARTING&nbsp;POINT&nbsp;</span></span>
+
+               </div>
+          </div>
+                   <div class="col-lg-4 text-center">
+                      <div class="form_img">
+                         <img src="./assets/images/bg_1.png" alt="image_not_found">
+                      </div>
+                   </div>
+                   <div class="col-lg-4 text-end">
+                    <div >
+                      <ul  >
+                         <li>
+                           <div class="review_block mt-6">
+                              <div class="range-field mb-5">
+                                 <h2  class="title text-black font-sans text-xl text-center mt-8 mb-4">HOW TALL ARE YOU ?</h2>
+                                <span class="min_slider">140 cm</span>
+                                <span class="max_slider">200 cm</span>
+       
+                                <p class="text-center text-2xl font-bold text-orange-600 mb-2" for ="range_height" >{{height}}</p>
+                                <input  formControlName = "height"  class="slider" type="range" id="range_height" min="140" max="200" step="1"   (input)="HeightChanged($event)" /> 
+                            
+                             
+                             
+                              </div>
+                            </div>
+                         </li>
+                      
+                       
+                         <li>
+                           <div class="review_block">
+                              <div class="range-field">
+                                 <h2  class="title text-black font-sans text-xl text-center mb-4">HOW MUCH DO YOU WEIGHT ?</h2>
+                                <span class="min_slider">40 kg</span>
+                                <span class="max_slider">130 kg</span>
+       
+                                <p  class="text-center text-2xl font-bold text-orange-600 mb-2" >{{weight}}</p>
+                                <input  formControlName = "height"  class="slider" type="range" id="range_height" min="40" max="130" step="1"   (input)="WeightChanged($event)" /> 
+                           
+                             
+                             
+                              </div>
+                            </div>
+                         </li>
+                      </ul>
+                    </div>
+                 </div>
+                </div>
+             </div>
+             <!---------- Form Button ---------->
+             <div class="form_btn py-5 d-flex justify-content-center align-items-center">
+                <button type="button" class="js-btn-next f_btn rounded-pill active text-uppercase" id="nextBtn"> Next Question <span><i class="fas fa-arrow-right ps-1"></i></span></button>
+             </div>
+          </div>
+          <!------------------------- Step-2 ----------------------------->
+          <div class="multisteps_form_panel" data-animation="slideVert">
+             <div class="form_content">
+                <div class="row">
+                   <div class="col-lg-4 self-center">
+                    <div class="form_title ps-5  ">
+                        <span class="title text-black font-sans text-3xl  mb-5 "><span class="font-bold">EACH TYPE</span> OF SKI <span class="font-bold">BEHAVES</span> DIFFRENTLY ACCORDING TO THE <span class="font-bold">TERRAIN</span>
+                        </span>
+         
+                     </div>
+                   </div>
+                   <div class="col-lg-4 text-center">
+                    
+                      <div class="form_img">
+                         <img src="./assets/images/bg_2.png" alt="image_not_found">
+                      </div>
+                   </div>
+                   <div class="col-lg-4 text-end">
+                    <h2  class="title font-bold font-sans  text-2xl text-center mt-10 mb-2 text-orange-600">WHAT IS YOUR ABILITY LEVEL?</h2>
+                      <div class="form_items radio-list">
+                         <ul class="text-uppercase list-unstyled">
+                            <li>
+                               <label for="opt_5" class="step_2 rounded-pill animate__animated animate__fadeInRight animate_25ms">
+                                  <span class="label-pointer rounded-circle text-center">A</span><input type="radio" id="opt_5"  name="stp_2_select_option" value="business" required>
+                                  <span class="label-content d-inline-block text-center rounded-pill">NEWBIE</span>
+                               </label>
+                            </li>
+                            <li>
+                               <label for="opt_6" class="step_2 rounded-pill animate__animated animate__fadeInRight animate_50ms">
+                                  <span class="label-pointer rounded-circle text-center">B</span><input type="radio" id="opt_6" name="stp_2_select_option" value="Employee">
+                                  <span class="label-content d-inline-block text-center rounded-pill">INTERMEDIATE</span>
+                               </label>
+                            </li>
+                            <li>
+                               <label for="opt_7" class="step_2 rounded-pill animate__animated animate__fadeInRight animate_100ms">
+                                  <span class="label-pointer rounded-circle text-center">C</span><input type="radio" id="opt_7" name="stp_2_select_option" value="Journalist">
+                                  <span class="label-content d-inline-block text-center rounded-pill">CONFIRMED</span>
+                               </label>
+                            </li>
+                            <li>
+                               <label for="opt_8" class="step_2 rounded-pill animate__animated animate__fadeInRight animate_150ms">
+                                  <span class="label-pointer rounded-circle text-center">D</span><input type="radio" id="opt_8" name="stp_2_select_option" value="Other">
+                                  <span class="label-content d-inline-block text-center rounded-pill">PRO-GUIDE</span>
+                               </label>
+                            </li>
+                         </ul>
+                      </div>
+                   </div>
+                </div>
+             </div>
+             <!---------- Form Button ---------->
+             <div class="form_btn py-5 d-flex justify-content-center align-items-center">
+                <button type="button" class="js-btn-prev f_btn rounded-pill disable text-uppercase" id="prevBtn"><span><i class="fas fa-arrow-left pe-1"></i></span> Last Question</button>
+                <button type="button" class="js-btn-next f_btn rounded-pill active text-uppercase" id="nextBtn"> Next Question <span><i class="fas fa-arrow-right ps-1"></i></span></button>
+             </div>
+          </div>
+          <!------------------------- Step-3 ----------------------------->
+          <div class="multisteps_form_panel" data-animation="slideVert">
+             <div class="form_content">
+                <div class="row">
+                   <div class="col-lg-4 self-center">
+                    <span class="title text-black font-sans text-3xl  mb-5 "><span class="font-bold">EACH TYPE</span> OF SKI
+                    <span class="font-bold">BEHAVES</span> DIFFRENTLY ACCORDING TO THE <span
+                       class="font-bold">TERRAIN</span>
+                 </span>
+                   </div>
+                   <div class="col-lg-4 text-center">
+                      <div class="form_img">
+                         <img src="./assets/images/bg_3.png" alt="image_not_found">
+                      </div>
+                   </div>
+                   <div class="col-lg-4 text-center">
+                    <h2  class="title font-bold font-sans  text-2xl text-center mt-10 mb-2 text-orange-600">WHAT IS THE TERRIN TYPE THAT YOU WILL BE SKIING MORE OFTEN?</h2>
+
+                      <div class="form_items check-list">
+                         <ul class="text-uppercase list-unstyled">
+                            <li>
+                               <label for="opt_9" class="step_3 rounded animate__animated animate__fadeInRight animate_25ms">
+                                  <span class="label-pointer rounded-pill text-center">A</span><input type="checkbox" id="opt_9"  name="stp_3_select_option" value="Facebook">
+                                  <span class="label-content d-inline-block text-center rounded-pill">TOURING BACK MOUNTAIN&nbsp;&nbsp;&nbsp;</span>
+                               </label>
+                            </li>
+                            <li>
+                               <label for="opt_10" class="step_3 rounded animate__animated animate__fadeInRight animate_50ms">
+                                  <span class="label-pointer rounded-pill text-center">B</span><input type="checkbox" id="opt_10" name="stp_3_select_option" value="Twitter">
+                                  <span class="label-content d-inline-block text-center rounded-pill">TOURING FRONT MOUNTAIN&nbsp;&nbsp;</span>
+                               </label>
+                            </li>
+                            <li>
+                               <label for="opt_11" class="step_3 rounded animate__animated animate__fadeInRight animate_100ms">
+                                  <span class="label-pointer rounded-pill text-center">C</span><input type="checkbox" id="opt_11" name="stp_3_select_option" value="Instagram">
+                                  <span class="label-content d-inline-block text-center rounded-pill">TOURING RACE&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                               </label>
+                            </li>
+                            <li>
+                               <label for="opt_12" class="step_3 rounded animate__animated animate__fadeInRight animate_150ms">
+                                  <span class="label-pointer rounded-pill text-center">D</span><input type="checkbox" id="opt_12" name="stp_3_select_option" value="Pinterest">
+                                  <span class="label-content d-inline-block text-center rounded-pill">TOURING MOUNTAINEERING</span>
+                               </label>
+                            </li>
+                         </ul>
+                      </div>
+                   </div>
+                </div>
+             </div>
+             <!---------- Form Button ---------->
+             <div class="form_btn py-5 d-flex justify-content-center align-items-center">
+                <button type="button" class="js-btn-prev f_btn rounded-pill disable text-uppercase" id="prevBtn"><span><i class="fas fa-arrow-left pe-1"></i></span> Last Question</button>
+                <button type="button" class="js-btn-next f_btn rounded-pill active text-uppercase" id="nextBtn"> Next Question <span><i class="fas fa-arrow-right ps-1"></i></span></button>
+             </div>
+          </div>
+          <!------------------------- Step-4 ----------------------------->
+          <div class="multisteps_form_panel" data-animation="slideVert">
+             <div class="form_content">
+                <div class="row">
+                   <div class="col-lg-4">
+                      <div class="form_title ps-5">
+                         <h1 class="text-white">Virtual Team Building Game For Remote Teams?</h1>
+                      </div>
+                   </div>
+                   <div class="col-lg-4 text-center">
+                      <div class="form_img">
+                         <img src="./assets/images/bg_4.png" alt="image_not_found">
+                      </div>
+                   </div>
+                   <div class="col-lg-4 text-end">
+                      <div class="form_items radio-list">
+                         <ul class="text-uppercase list-unstyled">
+                            <li>
+                               <label for="opt_13" class="step_4 rounded-pill animate__animated animate__fadeInRight animate_25ms">
+                                  <span class="label-pointer rounded-circle text-center">A</span><input type="radio" id="opt_13" name="stp_4_select_option" value="Zoom">
+                                  <span class="label-content d-inline-block text-center rounded-pill">Zoom</span>
+                               </label>
+                            </li>
+                            <li>
+                               <label for="opt_14" class="step_4 rounded-pill animate__animated animate__fadeInRight animate_50ms">
+                                  <span class="label-pointer rounded-circle text-center">B</span><input type="radio" id="opt_14" name="stp_4_select_option" value="Skype">
+                                  <span class="label-content d-inline-block text-center rounded-pill">Skype</span>
+                               </label>
+                            </li>
+                            <li>
+                               <label for="opt_15" class="step_4 rounded-pill animate__animated animate__fadeInRight animate_100ms">
+                                  <span class="label-pointer rounded-circle text-center">C</span><input type="radio" id="opt_15" name="stp_4_select_option" value="Google">
+                                  <span class="label-content d-inline-block text-center rounded-pill">Google</span>
+                               </label>
+                            </li>
+                            <li>
+                               <label for="opt_16" class="step_4 rounded-pill animate__animated animate__fadeInRight animate_150ms">
+                                  <span class="label-pointer rounded-circle text-center">D</span><input type="radio" id="opt_16" name="stp_4_select_option" value="Facebook">
+                                  <span class="label-content d-inline-block text-center rounded-pill">Facebook</span>
+                               </label>
+                            </li>
+                         </ul>
+                      </div>
+                   </div>
+                </div>
+             </div>
+             <!---------- Form Button ---------->
+             <div class="form_btn py-5 d-flex justify-content-center align-items-center">
+                <button type="button" class="js-btn-prev f_btn rounded-pill disable text-uppercase" id="prevBtn"><span><i class="fas fa-arrow-left pe-1"></i></span> Last Question</button>
+                <button type="submit" class="f_btn rounded-pill active text-uppercase" id="nextBtn"> Submit</button>
+             </div>
+          </div>
+       </form>
+    </div>
+    
+ </div>
