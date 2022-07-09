@@ -1,0 +1,61 @@
+  <!------------------------- Step-1 ----------------------------->
+  <div class="multisteps_form_panel active" data-animation="slideVert">
+    <div class="form_content">
+       <div class="row">
+          <div class="col-lg-4 self-center">
+             <div class="form_title ps-5  ">
+      <span  class="title text-black font-sans text-3xl  mb-5 "><span class="font-bold">HEIGHT&nbsp;</span>AND&nbsp; <span class="font-bold">WEIGHT&nbsp;</span>WILL&nbsp;BE <span class="font-bold">OUR&nbsp;STARTING&nbsp;POINT&nbsp;</span></span>
+
+      </div>
+ </div>
+          <div class="col-lg-4 text-center">
+             <div class="form_img">
+                <img src="./assets/images/bg_1.png" alt="image_not_found">
+             </div>
+          </div>
+          <div class="col-lg-4 text-end">
+           <div >
+             <ul  >
+                <li>
+                  <div class="review_block mt-6">
+                     <div class="range-field mb-5">
+                        <h2  class="title text-black font-sans text-xl text-center mt-8 mb-4">HOW TALL ARE YOU ?</h2>
+                       <span class="min_slider">140 cm</span>
+                       <span class="max_slider">200 cm</span>
+
+                       <p class="text-center text-2xl font-bold text-orange-600 mb-2" for ="range_height" >{{height}}</p>
+                       <input  formControlName = "height"  class="slider" type="range" id="range_height" min="140" max="200" step="1"   (input)="HeightChanged($event)" /> 
+                   
+                    
+                    
+                     </div>
+                   </div>
+                </li>
+             
+              
+                <li>
+                  <div class="review_block">
+                     <div class="range-field">
+                        <h2  class="title text-black font-sans text-xl text-center mb-4">HOW MUCH DO YOU WEIGHT ?</h2>
+                       <span class="min_slider">40 kg</span>
+                       <span class="max_slider">130 kg</span>
+
+                       <p  class="text-center text-2xl font-bold text-orange-600 mb-2" >{{weight}}</p>
+                       <input  formControlName = "height"  class="slider" type="range" id="range_height" min="40" max="130" step="1"   (input)="WeightChanged($event)" /> 
+                  
+                    
+                    
+                     </div>
+                   </div>
+                </li>
+             </ul>
+           </div>
+        </div>
+       </div>
+    </div>
+    <!---------- Form Button ---------->
+    <div class="form_btn py-5 d-flex justify-content-center align-items-center">
+       <button type="button" class="js-btn-next f_btn rounded-pill active text-uppercase" id="nextBtn"> Next <span><i class="fas fa-arrow-right ps-1"></i></span></button>
+    </div>
+    
+ </div>

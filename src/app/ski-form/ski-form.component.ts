@@ -7,8 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SkiFormComponent implements OnInit {
 
-  height : any = "Slide me";
-  weight : any = "Slide me";
+  
 
 
  constructor() { }
@@ -20,14 +19,10 @@ export class SkiFormComponent implements OnInit {
  }
 
  
- HeightChanged(e : any ) {
-   this.height = e.target.value +" cm"
- }
+ 
 
 
- WeightChanged(e : any ) {
-   this.weight = e.target.value + "Kg"
- }
+ 
 
 
 }
