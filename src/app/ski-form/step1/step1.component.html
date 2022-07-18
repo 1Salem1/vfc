@@ -14,7 +14,7 @@
              </div>
           </div>
           <div class="col-lg-4 text-end">
-           <div >
+           <div  >
              <ul  >
                 <li>
                   <div class="review_block mt-6">
@@ -54,8 +54,12 @@
        </div>
     </div>
     <!---------- Form Button ---------->
-    <div class="form_btn py-5 d-flex justify-content-center align-items-center">
-       <button type="button" class="js-btn-next f_btn rounded-pill active text-uppercase" id="nextBtn"> Next <span><i class="fas fa-arrow-right ps-1"></i></span></button>
+    <div class="form_btn py-4 d-flex justify-content-center align-items-center">
+       <button [disabled]="!(tr1 && tr2)" type="button" [ngClass]="{'js-btn-next f_btn rounded-pill active text-uppercase cursor-not-allowed opacity-30':  !(tr1 && tr2)  , 'js-btn-next f_btn rounded-pill active text-uppercase ' : tr1 && tr2 }"  id="nextBtn"> Next <span><i class="fas fa-arrow-right ps-1"></i></span></button>
+
+       
+       
     </div>
-    
+    <div class="title  font-sans font-bold text-xl text-orange-600 text-center mb-4" >* This field is required</div>
+
  </div>

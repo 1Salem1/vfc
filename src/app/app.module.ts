@@ -12,6 +12,9 @@ import { Step4Component } from './ski-form/step4/step4.component';
 import { Step5Component } from './ski-form/step5/step5.component';
 import { Step6Component } from './ski-form/step6/step6.component';
 import { ChooseYourGearComponent } from './choose-your-gear/choose-your-gear.component';
+import { SplitFormComponent } from './split-form/split-form.component';
+import { HomeComponent } from './home/home.component';
+import { SkiResultComponent } from './ski-result/ski-result.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +27,10 @@ import { ChooseYourGearComponent } from './choose-your-gear/choose-your-gear.com
     Step4Component,
     Step5Component,
     Step6Component,
-    ChooseYourGearComponent
+    ChooseYourGearComponent,
+    SplitFormComponent,
+    HomeComponent,
+    SkiResultComponent
   ],
   imports: [
     BrowserModule,

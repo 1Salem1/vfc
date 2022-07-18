@@ -9,6 +9,8 @@ export class Step1Component implements OnInit {
 
   height : any = "Slide me";
   weight : any = "Slide me";
+  tr1 : any = false ;
+  tr2 : any = false ;
 
 
  constructor() { }
@@ -22,12 +24,19 @@ export class Step1Component implements OnInit {
  
  HeightChanged(e : any ) {
    this.height = e.target.value +" cm"
+   this.tr1 = true 
  }
 
 
  WeightChanged(e : any ) {
    this.weight = e.target.value + "Kg"
+   this.tr2 = true
  }
+
+
+verif(){
+  return this.tr1 && this.tr2
+}
 
 
 }

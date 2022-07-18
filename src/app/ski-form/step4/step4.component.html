@@ -17,46 +17,46 @@
               <div class="col-lg-4 text-center">
                 <h2  class="title font-bold font-sans  text-2xl text-center mt-10 mb-2 text-orange-600">WHAT IS THE TERRIN TYPE THAT YOU WILL BE SKIING MORE OFTEN?</h2>
 
-                 <div class="form_items radio-list">
+                 <div class="form_items  check-list">
                     <ul class="text-uppercase list-unstyled">
-                       <li>
-                          <label for="opt_13" class="step_4 rounded-pill animate__animated animate__fadeInRight animate_25ms">
-                             <span class="label-pointer rounded-circle text-center">A</span><input type="checkbox" id="opt_13" name="stp_4_select_option" value="Zoom">
+                       <li >
+                          <label [hidden]="!(show1||show3||show4||show2||show5)" for="opt_13" class="step_4 rounded-pill animate__animated animate__fadeInRight animate_25ms">
+                             <span class="label-pointer rounded-circle text-center">A</span><input  (change)="checkCheckBoxvalue1($event)" type="radio" id="opt_13" name="stp_4_select_option" value="powder">
                              <span class="label-content d-inline-block text-center rounded-pill">POWDER</span>
                           </label>
                        </li>
-                       <li>
-                          <label for="opt_14" class="step_4 rounded-pill animate__animated animate__fadeInRight animate_50ms">
-                             <span class="label-pointer rounded-circle text-center">B</span><input type="checkbox" id="opt_14" name="stp_4_select_option" value="Skype">
+                       <li >
+                          <label [hidden]="!(show1||show2||show3||show4||show5)" for="opt_14" class="step_4 rounded-pill animate__animated animate__fadeInRight animate_50ms">
+                             <span class="label-pointer rounded-circle text-center">B</span><input (change)="checkCheckBoxvalue1($event)" type="radio" id="opt_14" name="stp_4_select_option" value="slush">
                              <span class="label-content d-inline-block text-center rounded-pill">SLUSH</span>
                           </label>
                        </li>
-                       <li>
-                          <label for="opt_15" class="step_4 rounded-pill animate__animated animate__fadeInRight animate_100ms">
-                             <span class="label-pointer rounded-circle text-center">C</span><input type="checkbox" id="opt_15" name="stp_4_select_option" value="Google">
+                       <li >
+                          <label [hidden]="!(show2 || show5)" for="opt_15" class="step_4 rounded-pill animate__animated animate__fadeInRight animate_100ms">
+                             <span class="label-pointer rounded-circle text-center">C</span><input class="bg-white" (change)="checkCheckBoxvalue1($event)" type="radio" id="opt_15" name="stp_4_select_option" value="crud">
                              <span class="label-content d-inline-block text-center rounded-pill">CRUD</span>
                           </label>
                        </li>
                        <li>
-                          <label for="opt_16" class="step_4 rounded-pill animate__animated animate__fadeInRight animate_150ms">
-                             <span class="label-pointer rounded-circle text-center">D</span><input type="checkbox" id="opt_16" name="stp_4_select_option" value="Facebook">
+                          <label  [hidden]="!(show3|| show4 || show5)"  for="opt_16" class="step_4 rounded-pill animate__animated animate__fadeInRight animate_150ms">
+                             <span class="label-pointer rounded-circle text-center">D</span><input (change)="checkCheckBoxvalue1($event)" type="radio" id="opt_16" name="stp_4_select_option" value="crust">
                              <span class="label-content d-inline-block text-center rounded-pill">CRUST</span>
                           </label>
                        </li>
-                       <li>
-                         <label for="opt_17" class="step_4 rounded-pill animate__animated animate__fadeInRight animate_150ms">
-                            <span class="label-pointer rounded-circle text-center">E</span><input type="checkbox" id="opt_17" name="stp_4_select_option" value="Facebook">
+                       <li >
+                         <label [hidden]="!(show3 || show4 || show5)" for="opt_17" class="step_4 rounded-pill animate__animated animate__fadeInRight animate_150ms">
+                            <span class="label-pointer rounded-circle text-center">E</span><input (change)="checkCheckBoxvalue1($event)" type="radio" id="opt_17" name="stp_4_select_option" value="ice">
                             <span class="label-content d-inline-block text-center rounded-pill">ICE</span>
                          </label>
                       </li>
                     </ul>
                  </div>
-              </div>
+                 
            </div>
         </div>
         <!---------- Form Button ---------->
         <div class="form_btn py-5 d-flex justify-content-center align-items-center">
-          <button type="button" class="js-btn-prev f_btn rounded-pill disable text-uppercase" id="prevBtn"><span><i class="fas fa-arrow-left pe-1"></i></span>Previous</button>
+          <button type="button" class="js-btn-prev f_btn rounded-pill disable text-uppercase" id="prevBtn"><span><i class="fas fa-arrow-left pe-1"></i></span>Back</button>
           <button type="button" class="js-btn-next f_btn rounded-pill active text-uppercase" id="nextBtn"> Next <span><i class="fas fa-arrow-right ps-1"></i></span></button>
        </div>
      </div>
