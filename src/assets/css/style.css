@@ -185,6 +185,7 @@ Author      : jthemes (https://themeforest.net/user/jthemes)
 .form_items label {
   padding: 0rem 3rem;
   cursor: pointer;
+  font-size: 12px;
 }
 .form_items .label-pointer {
   font-weight: 600;
@@ -192,7 +193,7 @@ Author      : jthemes (https://themeforest.net/user/jthemes)
   margin-right: 0.5rem;
   padding: 1rem 1.5rem;
   background-color: #CCCCCC;
-  border: 4px solid transparent;
+  border: 2px solid transparent;
   cursor: pointer;
 }
 .form_items .label-content {

@@ -53,8 +53,5 @@
        <button type="button" class="js-btn-prev f_btn rounded-pill disable text-uppercase" id="prevBtn"><span><i class="fas fa-arrow-left pe-1"></i></span>Back</button>
        <button [disabled]="!contentEditable" type="button" [ngClass]="{'js-btn-next f_btn rounded-pill active text-uppercase cursor-not-allowed opacity-30':  !contentEditable  , 'js-btn-next f_btn rounded-pill active text-uppercase ' :  contentEditable }"  id="nextBtn"> Next <span><i class="fas fa-arrow-right ps-1"></i></span></button>
     </div>
-    <div class="form_btn  d-flex justify-content-center ">
-      <button type="button" class="js-btn-next f_btn rounded-pill active text-uppercase invisible"> Next aweaweaaweaweaw<span><i class="fas fa-arrow-right ps-1"></i></span></button>
-      <div class="title  font-sans font-bold text-xl text-orange-600 text-center mb-3" >*This field is required</div>
-   </div>
+      <div class="title  font-sans font-bold text-xs text-orange-600 text-center mb-3" >*This field is required</div>
  </div>

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, ReactiveFormsModule } from '@angular/forms';
-
+import { DataServiceService } from 'src/app/data-service.service';
 
 @Component({
   selector: 'app-step2',
@@ -13,7 +13,7 @@ export class Step2Component implements OnInit {
   contentEditable: boolean = false ;
 
 
-  constructor() { }
+  constructor(private  dataService: DataServiceService) { }
 
   ngOnInit(): void {
   }
@@ -22,8 +22,14 @@ export class Step2Component implements OnInit {
   toggleEditable(event : any) {
     if ( event.target.checked ) {
         this.contentEditable = true;
-        console.log(event.target.value)
+        //console.log(event.target.value)
+        this.sendSkiLevel(event.target.value)
    }
 }
+
+sendSkiLevel(data: any) {
+  this.dataService.sendData3(data);
+}
+
 
 }

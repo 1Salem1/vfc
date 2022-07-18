@@ -6,7 +6,7 @@ import { DataServiceService } from 'src/app/data-service.service';
   styleUrls: ['./step3.component.css']
 })
 export class Step3Component implements OnInit {
-
+ check : any 
  type_terrain : any 
  tr : any 
   constructor(private dataService: DataServiceService) { }
@@ -24,13 +24,16 @@ export class Step3Component implements OnInit {
 }
 
 sendNewData(data: any) {
-  this.dataService.sendData(data);
+  this.dataService.sendData4(data);
 }
 
   checkCheckBoxvalue(event : any ){
    if (event.target.checked){
     this.tr = true ;
       console.log(event.target.value)
+ }
+ else {
+  this.tr = false ;
  }
  this.sendNewData(event.target.value)
   }

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DataServiceService } from 'src/app/data-service.service';
 
 @Component({
   selector: 'app-step1',
@@ -13,7 +14,7 @@ export class Step1Component implements OnInit {
   tr2 : any = false ;
 
 
- constructor() { }
+ constructor (private  dataService: DataServiceService) { }
 
  ngOnInit(
   
@@ -25,18 +26,31 @@ export class Step1Component implements OnInit {
  HeightChanged(e : any ) {
    this.height = e.target.value +" cm"
    this.tr1 = true 
+   this.sendHeight(e.target.value)
  }
 
 
  WeightChanged(e : any ) {
    this.weight = e.target.value + "Kg"
    this.tr2 = true
+   this.sendWeight(e.target.value)
  }
 
 
 verif(){
   return this.tr1 && this.tr2
 }
+
+
+sendHeight(data: any) {
+  this.dataService.sendData(data);
+}
+
+
+sendWeight(data: any) {
+  this.dataService.sendData2(data);
+}
+
 
 
 }

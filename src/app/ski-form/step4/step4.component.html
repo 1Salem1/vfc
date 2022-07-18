@@ -57,6 +57,8 @@
         <!---------- Form Button ---------->
         <div class="form_btn py-5 d-flex justify-content-center align-items-center">
           <button type="button" class="js-btn-prev f_btn rounded-pill disable text-uppercase" id="prevBtn"><span><i class="fas fa-arrow-left pe-1"></i></span>Back</button>
-          <button type="button" class="js-btn-next f_btn rounded-pill active text-uppercase" id="nextBtn"> Next <span><i class="fas fa-arrow-right ps-1"></i></span></button>
+          <button [disabled]="!hidden" type="button" [ngClass]="{'js-btn-next f_btn rounded-pill active text-uppercase cursor-not-allowed opacity-30':  !hidden  , 'js-btn-next f_btn rounded-pill active text-uppercase ' :  hidden }"  id="nextBtn"> Next <span><i class="fas fa-arrow-right ps-1"></i></span></button>
        </div>
+       <div class="title  font-sans font-bold text-xs text-orange-600 text-center mb-4" >* This field is required</div>
+
      </div>

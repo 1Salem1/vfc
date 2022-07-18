@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DataServiceService } from 'src/app/data-service.service';
 
 @Component({
   selector: 'app-step6',
@@ -7,9 +8,30 @@ import { Component, OnInit } from '@angular/core';
 })
 export class Step6Component implements OnInit {
 
-  constructor() { }
+
+  hidden : any ;
+  constructor(private dataService: DataServiceService) { }
 
   ngOnInit(): void {
+   // this.getData()
   }
 
+
+  checkCheckBoxvalue1(event : any ){
+
+    this.checkchecked(event.target.value)
+  }
+
+  checkchecked( x : any ){
+    if(x){
+      this.hidden = true
+    }
+    else {
+      this.hidden = false
+    }
+  } 
+
+  sendNewData(data: any) {
+    this.dataService.sendData3(data);
+  }
 }

@@ -1,4 +1,4 @@
-import { ThisReceiver } from '@angular/compiler';
+
 import { Component, OnInit } from '@angular/core';
 import { DataServiceService } from 'src/app/data-service.service';
 @Component({
@@ -9,8 +9,8 @@ import { DataServiceService } from 'src/app/data-service.service';
 export class Step4Component implements OnInit {
 
  
-
-  type_snow : any = []
+  hidden : any  = null;
+  type_snow : any = null
   show1: boolean = false;
   show2: boolean = false;
   show3: boolean = false;
@@ -32,41 +32,50 @@ export class Step4Component implements OnInit {
 
 
 sendNewData(data: any) {
-  this.dataService.sendData2(data);
+  this.dataService.sendDataT(data);
 }
 
   checkCheckBoxvalue1(event : any ){
-   if (event.target.checked){
-    console.log(event.target.value)
-   if (!this.type_snow.includes(event.target.value)){
-    this.type_snow.push(event.target.value)
-   } 
-   }
-   else {
-    if (this.type_snow.includes(event.target.value)){
-     this.type_snow = this.arrayRemove(this.type_snow,event.target.value)
-     }
- 
-   }
 
+    this.checkchecked(event.target.value)
+
+    if (event.target.checked){
+ 
+      this.type_snow = event.target.value
+      console.log(this.type_snow)
+     } 
+     
   
-   console.log(this.type_snow)
-   this.sendNewData(this.type_snow)
-   this.getData()
+  
+     
+   
+    
+
+    this.getData()  
+  // console.log(this.type_snow)
+  this.sendNewData(this.type_snow)
 
   }
 
 getData(){
-  this.dataService.data.subscribe(response => {
-    console.log(response);  // you will receive the data from sender component here.
-     this.type_snow = []
+  this.dataService.terrain_type.subscribe(response => {
+//  console.log(response);  // you will receive the data from sender component here.
+  
     this.checkShow(response)
+   
   });
 }
 
 
 
-
+checkchecked( x : any ){
+  if(x){
+    this.hidden = true
+  }
+  else {
+    this.hidden = false
+  }
+} 
 
 
   checkShow (e : any ){
