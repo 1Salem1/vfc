@@ -1,5 +1,5 @@
 
-<div class=" px-4 mx-auto md:px-8 justify-center  wrapper">
+<div class=" mx-auto md:px-8 justify-center  wrapper">
     <app-top></app-top>
       <div class="mb-10 md:mb-16">
         <h2
@@ -20,37 +20,46 @@
      
       </div>
     
-      <div class="grid mb-3  grid-cols-3 place-items-center">
-      <a class='my-10' href="/ski">
+      <div class="grid mb-3  grid-cols-3 object-center justify-center content-center place-items-center">
+
+
+
+
+      <a class='my-10' target="_blank"  href={{ar[0].link}}>
         <img 
-        src= "https://ogso-mountain-essentials.com/app/ski-photos/SPEARHEAD.png"
-        alt="Image"
-        class=""
+        src= {{ar[0].src}}
+        alt={{ar[0].name}}
+        class="mx-auto"
       />
       <div class="text-center mt-5">
-      <p class="text-2xl">Name </p>
-       <p>Size</p>
-      </div>
+        <p class="text-sm">{{ar[0].name}}</p>
+         <p>{{ar[0].size}} cm</p>
+        </div>
       </a>
-      <a class='my-10' href="splitboard">
+
+
+
+
+
+      <a class='my-10' target="_blank"  href={{ar[1].link}}>
         <img 
-        src= "https://ogso-mountain-essentials.com/app/ski-photos/SPEARHEAD.png"
-        alt="Image"
-        class=""
+        src= {{ar[1].src}}
+        alt={{ar[1].name}}
+        class="mx-auto"
       /> 
       <div class="text-center mt-5">
-        <p class="text-2xl">Name </p>
-          <p>Size</p>
+        <p >{{ar[1].name}}</p>
+          <p>{{ar[1].size}} cm</p>
          </div>
-      </a>   <a class='my-10' href="splitboard">
+      </a>   <a class='my-10' target="_blank"  href={{ar[2].link}}>
         <img 
-        src= "https://ogso-mountain-essentials.com/app/ski-photos/SPEARHEAD.png"
-        alt="Image"
-        class=""
+        src= {{ar[2].src}}
+        alt={{ar[2].name}}
+        class="mx-auto"
       /> 
       <div class="text-center mt-5">
-                <p class="text-2xl">Name </p>
-          <p>Size</p>
+                <p >{{ar[2].name}}</p>
+          <p>{{ar[2].size}} cm</p>
          </div>
       </a>
           

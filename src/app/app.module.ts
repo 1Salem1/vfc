@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SkiFormComponent } from './ski-form/ski-form.component';
@@ -15,6 +14,20 @@ import { ChooseYourGearComponent } from './choose-your-gear/choose-your-gear.com
 import { SplitFormComponent } from './split-form/split-form.component';
 import { HomeComponent } from './home/home.component';
 import { SkiResultComponent } from './ski-result/ski-result.component';
+import { initializeApp } from "firebase/app";
+import { getDatabase } from "firebase/database";
+
+
+
+
+
+
+
+
+
+
+
+
 
 @NgModule({
   declarations: [
@@ -34,9 +47,12 @@ import { SkiResultComponent } from './ski-result/ski-result.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+   
   ],
-  providers: [],
+  providers: [
+  
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "clone-7a4f4": {
+      "hosting": {
+        "smart-ogso-selector": [
+          "clone-7a4f4"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "clone-7a4f4"
+  }
+}

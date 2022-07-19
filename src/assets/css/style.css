@@ -245,8 +245,12 @@ Author      : jthemes (https://themeforest.net/user/jthemes)
 }
 .form_btn .active {
   color: #ffffff;
-  background-color: #172126;
+  background-color: #172126; 
 }
+
+
+
+
 .form_btn .active:hover {
   color: #000000;
   background-color: #ffffff;
@@ -260,6 +264,29 @@ body {
   font-display: swap;
   font-family: "Oswald", sans-serif;
 }
+
+
+.form_btn .blocked {
+  color: #ffffff;
+  background-color: #172126; 
+}
+
+
+.blocked {
+  color: #CCCCCC ;
+  background-color: white !important; 
+
+} 
+
+.form_btn .blocked:hover {
+  color: #CCCCCC ;
+  background-color: white !important; 
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+
+
 
 a,
 button,
